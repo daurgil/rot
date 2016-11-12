@@ -24,7 +24,7 @@
     public function autocomplete_products() {
       if ((isset($_GET["autocomplete"])) && ($_GET["autocomplete"] === "true")) {
           set_error_handler('ErrorHandler');
-          $path_model = MODEL_PATH_PRODUCTS;
+          $path_model = MODEL_PRODUCTS;
           try {
 
               $nameProducts = loadModel($path_model, "list_model", "select_column_products", "name");
@@ -52,7 +52,7 @@
           } else {
               $criteria = '';
           }
-          $path_model = MODEL_PATH_PRODUCTS;
+          $path_model = MODEL_PRODUCTS;
           set_error_handler('ErrorHandler');
           try {
 
@@ -88,7 +88,7 @@
         } else {
             $criteria = '';
         }
-        $path_model = MODEL_PATH_PRODUCTS;
+        $path_model = MODEL_PRODUCTS;
         set_error_handler('ErrorHandler');
         try {
 
@@ -129,7 +129,7 @@
         }
 
         $item_per_page = 6;
-        $path_model = MODEL_PATH_PRODUCTS;
+        $path_model = MODEL_PRODUCTS;
 
         //change work error apache
         set_error_handler('ErrorHandler');
@@ -139,8 +139,10 @@
                 "column" => "name",
                 "like" => $criteria
             );
+
             //throw new Exception();
             $arrValue = loadModel($path_model, "list_model", "count_like_products", $arrArgument);
+
             $get_total_rows = $arrValue[0]["total"]; //total records
             $pages = ceil($get_total_rows / $item_per_page); //break total records into pages
             //ceil redondea fracciones hacia arriba
@@ -174,7 +176,7 @@
     }
 	}
 
-  public function idProduct(){
+  public function obtain_products(){
 
     if (isset($_GET["idProduct"])) {
         $arrValue= null;
@@ -187,7 +189,7 @@
 
         set_error_handler('ErrorHandler');
         try {
-          $path_model = MODEL_PATH_PRODUCTS;
+          $path_model = MODEL_PRODUCTS;
           $arrValue = loadModel($path_model, "list_model", "details_products",$id);
         } catch (Exception $e) {
           showErrorPage(2, "ERROR - 503 BD", 'HTTP/1.0 503 Service Unavailable', 503);
@@ -235,7 +237,7 @@
         }
 
         $position = (($page_number - 1) * $item_per_page);
-        $path_model = MODEL_PATH_PRODUCTS;
+        $path_model = MODEL_PRODUCTS;
         $limit = $item_per_page;
         $arrArgument = array(
             "column" => "name",

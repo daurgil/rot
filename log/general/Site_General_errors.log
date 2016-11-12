@@ -2827,3 +2827,61 @@ Notice on line 3 in file /var/www/html/php_mvc_products/model/conf.class.singlet
 Notice on line 4 in file /var/www/html/php_mvc_products/model/conf.class.singleton.php
  | products_frontend | response 200
 10/11/16 07:18:55 PM | error loadView general | products | response 400
+12/11/16 07:05:31 PM | error loadView general | products | response 400
+12/11/16 07:06:38 PM | error loadView general | products | response 400
+12/11/16 07:09:11 PM | error loadView general | products | response 400
+12/11/16 07:44:12 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:44:12 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:47:07 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:47:07 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:47:07 PM | error paint_template_error | products | response200
+12/11/16 07:49:09 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:49:09 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:49:09 PM | error paint_template_error | products | response200
+12/11/16 07:51:10 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:51:10 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:51:10 PM | error paint_template_error | products | response200
+12/11/16 07:52:38 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:52:38 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:52:38 PM | error paint_template_error | products | response200
+12/11/16 07:53:25 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:53:25 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:56:56 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:56:56 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:57:27 PM | ERROR - 503 BD |  | response 200
+12/11/16 07:57:27 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:01:36 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:01:36 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:04:41 PM | ERROR: [8] Use of undefined constant aqui - assumed 'aqui'
+Notice on line 142 in file /var/www/html/rot/modules/products/controller/controller_products.class.php
+ | products | response 200
+12/11/16 08:04:41 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:05:29 PM | ERROR: [8] Use of undefined constant aqui - assumed 'aqui'
+Notice on line 142 in file /var/www/html/rot/modules/products/controller/controller_products.class.php
+ | products | response 200
+12/11/16 08:05:29 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:06:29 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:06:29 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:19 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:19 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:36 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:36 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:54 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:07:54 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:15:37 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:15:37 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:17:26 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:17:26 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:18:12 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:18:12 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:20:05 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:20:05 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:20:36 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:28:23 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:29:19 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:29:19 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:30:33 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:40:13 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:42:53 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:44:42 PM | ERROR - 503 BD |  | response 200
+12/11/16 08:44:42 PM | error paint_template_error | products | response200

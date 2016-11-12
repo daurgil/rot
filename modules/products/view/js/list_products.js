@@ -16,24 +16,26 @@ function search(keyword) {
 
     var urlbase = "index.php?module=products&function=num_pages_products";
     if (!keyword){
-        url = urlbase + "?num_pages=true";
+        url = urlbase + "&num_pages=true";
     } else {
-        url = urlbase + "?num_pages=true&keyword=" + keyword;
+        url = urlbase + "&num_pages=true&keyword=" + keyword;
     }
-
+    console.log(url);
     $.get(url, function (data, status) {
+
         var json = JSON.parse(data);
         var pages = json.pages;
-
+        urlbase = "index.php?module=products&function=obtain_products";
         if (!keyword){
             url = urlbase;
         } else {
-            url = urlbase + "?keyword=" + keyword;
+            url = urlbase + "&keyword=" + keyword;
         }
-
+        console.log(url);
         $("#results").load(url);
 
         if (pages !== 0) {
+          //console.log(pages);
             refresh();
             $(".pagination").bootpag({
                 total: pages,
@@ -44,31 +46,30 @@ function search(keyword) {
             }).on("page", function (e, num) {
                 e.preventDefault();
                 if (!keyword){
-                    $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php", {'page_num': num});
+                    $("#results").load("index.php?module=products&function=obtain_products", {'page_num': num});
                 } else {
-                    $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php", {'page_num': num, 'keyword': keyword});
+                    $("#results").load("index.php?module=products&function=obtain_products", {'page_num': num, 'keyword': keyword});
                 }
                 reset();
             });
         } else {
-            $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=false"); //view_error=false
+            $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
             $('.pagination').html('');
             reset();
         }
         reset();
 
     }).fail(function (xhr) {
-        $("#results").load("modules/products/controller/controller_products.class.php?view_error=true");
+        $("#results").load("index.php?module=products&function=view_error_true&view_error=true");
         $('.pagination').html('');
         reset();
     });
 }
 
 function search_product(keyword) {
-    $.get("modules/products_frontend/controller/controller_products_frontend.class.php?nom_product=" + keyword, function (data, status) {
+    $.get("index.php?module=products&function=name_products&nom_product=" + keyword, function (data, status) {
         var json = JSON.parse(data);
         var product = json.product_autocomplete;
-
 
         $('#results').html('');
         $('.pagination').html('');
@@ -86,20 +87,20 @@ function search_product(keyword) {
 
     }).fail(function (xhr) {
       console.log("error");
-        $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=false");
+        $("#results").load("index.php?module=products&function=view_error_false&view_error=false");
         $('.pagination').html('');
         reset();
     });
 }
 
 function count_product(keyword) {
-    $.get("modules/products_frontend/controller/controller_products_frontend.class.php?count_product=" + keyword, function (data, status) {
+    $.get("index.php?module=products&function=count_products&count_product=" + keyword, function (data, status) {
         var json = JSON.parse(data);
         var num_products = json.num_products;
         //alert("num_products: " + num_products);
 
         if (num_products == 0) {
-            $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=false"); //view_error=false
+            $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
             $('.pagination').html('');
             reset();
         }
@@ -110,7 +111,7 @@ function count_product(keyword) {
             search(keyword);
         }
     }).fail(function () {
-        $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=true"); //view_error=false
+        $("#results").load("index.php?module=products&function=view_error_true&view_error=true"); //view_error=false
         $('.pagination').html('');
         reset();
     });
@@ -133,6 +134,7 @@ $(document).ready(function () {
      //("#keyword").val(keyword) if we don't use refresh(), this way we could show the search param
       setCookie("search","",1);
   } else {
+    console.log("search");
       search();
   }
 
@@ -160,7 +162,7 @@ $(document).ready(function () {
 
   });
 
-    $.get("modules/products_frontend/controller/controller_products_frontend.class.php?autocomplete=true", function (data, status) {
+    $.get("index.php?module=products&function=autocomplete_products&autocomplete=true", function (data, status) {
         var json = JSON.parse(data);
         var name_products = json.nom_productos;
 
@@ -182,7 +184,7 @@ $(document).ready(function () {
         });
 
     }).fail(function (xhr) {
-      $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=false"); //view_error=false
+      $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
       $('.pagination').html('');
       reset();
 

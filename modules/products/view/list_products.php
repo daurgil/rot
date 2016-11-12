@@ -2,6 +2,8 @@
 <script type="text/javascript" src="<?php echo PRODUCTS_JS_PATH ?>list_products.js" ></script>
 <link rel="stylesheet" href="<?php echo PRODUCTS_CSS_PATH ?>products.css" media="screen" title="no title">
 
+<br><br><br><br><br><br><br>
+
 <center>
 <form name="search_prod" id="search_prod" class="search_prod">
     <input type="text" value="" placeholder="Search Product ..." class="input_search" id="keyword" list="datalist">

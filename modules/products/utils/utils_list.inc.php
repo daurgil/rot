@@ -1,6 +1,6 @@
 <?php
 function paint_template_error($message) {
-    $log = Log::getInstance();
+    $log = log::getInstance();
     $log->add_log_general("error paint_template_error", "products", "response" . http_response_code()); //$text, $controller, $function
     $log->add_log_product("error paint_template_error", "", "products", "response" . http_response_code()); //$msg, $username = "", $controller, $function
     //$arrData = response_code(http_response_code());
@@ -28,7 +28,7 @@ function paint_template_error($message) {
 }
 
 function paint_template_products($arrData) {
-    print ("<script type='text/javascript' src='modules/products_frontend/view/js/modal_products.js'></script>");
+    print ("<script type='text/javascript' src='modules/products/view/js/modal_products.js'></script>");
     print('<section id="services" >');
     print ("<div class='container'>");
 
@@ -81,7 +81,7 @@ function paint_template_products($arrData) {
 }
 
 function paint_template_search($message) {
-    $log = Log::getInstance();
+    $log = log::getInstance();
     $log->add_log_general("error paint_template_search", "products", "response " . http_response_code()); //$text, $controller, $function
     $log->add_log_product("error paint_template_search", "", "products", "response " . http_response_code()); //$msg, $username = "", $controller, $function
 

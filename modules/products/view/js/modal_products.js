@@ -7,7 +7,7 @@ $(document).ready(function () {
         console.log(id);
         //alert(id);
 
-        $.get("modules/products_frontend/controller/controller_products_frontend.class.php?idProduct=" + id, function (data, status) {
+        $.get("index.php?module=products&function=obtain_products&idProducto=" + id, function (data, status) {
             console.log(data);
             var json = JSON.parse(data);
             var product = json.product;
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
         })
                 .fail(function (xhr) {
-                    $("#results").load("modules/products_frontend/controller/controller_products_frontend.class.php?view_error=true");
+                    $("#results").load("index.php?module=products&function=view_error_false&view_error=false");
                 });
     });
 });
