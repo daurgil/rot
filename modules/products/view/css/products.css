@@ -42,7 +42,7 @@ and open the template in the editor.
     margin: 6px;
     border-radius: 8px;
 }
-.product_id{
+.tecnico_dni{ /*cambiat nom product_id ----> tecnico_dni*/
     color: whitesmoke;
     border-style:  outset;
     background-color:  #34495e;
@@ -53,13 +53,13 @@ and open the template in the editor.
     border-radius: 8px;
     font-weight: bold;
 }
-.product_id:hover{
+.tecnico_dni:hover{ /*cambiat nom product_id ----> tecnico_dni*/
     background-color:  #2ecc71;
 }
 .title-product{
     color:  darkred;
 }
-.img-product{
+.img-avatar{
     height:300px;
     width:300px;
     margin: 30px;

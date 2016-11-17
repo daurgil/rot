@@ -1,31 +1,34 @@
 //we do this so that  details_prod don't appear
 
 $(document).ready(function () {
-    $('.product_id').css('cursor', 'pointer');
-    $('.product_id').click(function () {
+    $('.tecnico_dni').css('cursor', 'pointer');
+    $('.tecnico_dni').click(function () {
         var id = this.getAttribute('id');
         console.log(id);
         //alert(id);
 
-        $.get("index.php?module=products&function=obtain_products&idProducto=" + id, function (data, status) {
+        $.get("index.php?module=products&function=obtain_products&idProduct=" + id, function (data, status) {
             console.log(data);
             var json = JSON.parse(data);
-            var product = json.product;
-            console.log(product);
+            var tecnico = json.tecnico;
+            //console.log(tecnico);
 
             $('#results').html('');
             $('.pagination').html('');
 
-            var img_product = document.getElementById('img_prod');
-            img_product.innerHTML = '<img src="' + product.img_icon + '" class="img-product"> ';
+            /*var img_tecnico = document.getElementById('img_avatar'); /// cambiar en CSS products
+            img_tecnico.innerHTML = '<img src="' + product[0].img_avatar + '" class="img-product"> ';*/
 
-            var nom_product = document.getElementById('name_prod');
-            nom_product.innerHTML = product.name;
-            var desc_product = document.getElementById('description_prod');
-            desc_product.innerHTML = product.description;
-            var price_product = document.getElementById('price_prod');
-            price_product.innerHTML = "Precio: " + product.price + " €";
-            price_product.setAttribute("class", "special");
+            var nom_tecnico = document.getElementById('name_tecnico');
+            nom_tecnico .innerHTML = tecnico.name;
+            var phone_tecnico  = document.getElementById('phone_tecnico');
+            phone_tecnico.innerHTML = tecnico.phone;
+            var email_tecnico = document.getElementById('email_tecnico');
+            email_tecnico.innerHTML = tecnico.email;
+            var points_tecnico = document.getElementById('points_tecnico');
+            points_tecnico.innerHTML = "Puntos: " + tecnico.points;
+            points_tecnico.setAttribute("class", "special");
+
 
         })
                 .fail(function (xhr) {

@@ -2885,3 +2885,30 @@ Notice on line 142 in file /var/www/html/rot/modules/products/controller/control
 12/11/16 08:42:53 PM | ERROR - 503 BD |  | response 200
 12/11/16 08:44:42 PM | ERROR - 503 BD |  | response 200
 12/11/16 08:44:42 PM | error paint_template_error | products | response200
+13/11/16 01:44:29 AM | ERROR: [8] Undefined variable: stmt
+Notice on line 24 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | products | response 200
+13/11/16 02:15:08 AM | ERROR: [8] Use of undefined constant exir - assumed 'exir'
+Notice on line 45 in file /var/www/html/rot/model/db.class.singleton.php
+ | products | response 200
+14/11/16 08:22:27 PM | ERROR: [8] Undefined variable: result
+Notice on line 24 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | products | response 200
+14/11/16 09:12:42 PM | ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | products | response 200
+14/11/16 09:21:39 PM | ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | products | response 200
+14/11/16 09:22:32 PM | ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | products | response 200
+15/11/16 05:01:45 PM | ERROR - 404 NO DATA |  | response 200
+15/11/16 05:03:07 PM | ERROR - 404 NO DATA |  | response 200
+15/11/16 05:19:10 PM | ERROR - 404 NO DATA |  | response 200
+16/11/16 08:32:59 PM | error loadView general | products | response 400
+17/11/16 05:51:24 PM | error paint_template_search | products | response 200
+17/11/16 05:51:32 PM | error paint_template_search | products | response 200
+17/11/16 05:51:43 PM | error paint_template_search | products | response 200
+17/11/16 05:51:53 PM | error paint_template_search | products | response 200
+17/11/16 05:52:54 PM | error paint_template_search | products | response 200

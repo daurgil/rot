@@ -36,7 +36,7 @@ function paint_template_products($arrData) {
 
     if (isset($arrData) && !empty($arrData)) {
         $i = 0;
-        foreach ($arrData as $product) {
+        foreach ($arrData as $tecnico) {
             $i++;
             if (count($arrData) % 2 !== 0 && i >= count($arrData)){
                 //print( '<div class="table-row">');
@@ -52,13 +52,14 @@ function paint_template_products($arrData) {
 
             print('<div class="media">');
             print('<div class="pull-left">');
-            print('<img src="' . $product['img_icon'] . '" class="icon-md" height="80" width="80">');
+            /*print('<img src="' . $tecnico['img_avatar'] . '" class="icon-md" height="80" width="80">');*/
             print('</div>');
             print('<div class="media-body">');
-            print('<h3 class="media-heading">' . $product['name'] . '</h3>');
-            print('<p>' . $product['description'] . '</p>');
-            print('<h5> <strong>Precio:' . $product['price'] . '</strong><strong>€</strong> </h5>');
-            print("<div id='" . $product['ident'] . "' class='product_id'> Read Details </div>");
+            print('<h3 class="media-heading">' . $tecnico['name'] . '</h3>');
+            print('<p>' . $tecnico['phone'] . '</p>');
+            print('<p>' . $tecnico['dni'] . '</p>');
+            print('<h5> <strong>Puntos: ' . $tecnico['points'] . '</strong> </h5>');
+            print("<div id='" . $tecnico['dni'] . "' class='tecnico_dni'> Read Details </div>");
 
             print('</div>');
             print('</div>');

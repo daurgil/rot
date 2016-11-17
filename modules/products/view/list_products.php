@@ -22,15 +22,17 @@
 <section >
     <div class="container" id="product">
         <div class="media">
-            <div class="pull-left">
+            <!--<div class="pull-left">
                 <div id="img_prod" class="img_product"></div>
-            </div>
+            </div>-->
             <div class="media-body">
                 <div id="text-product">
-                <h3 class="media-heading title-product"  id="name_prod"></h3>
-                <p class="text-limited" id="description_prod" ></p>
+                <h3 class="media-heading title-product"  id="name_tecnico"></h3>
+                <p class="text-limited" id="phone_tecnico"></p>
                 <br>
-                <h5 > <strong  id="price_prod"></strong> </h5>
+                <p class="text-limited" id="email_tecnico"></p>
+                <br>
+                <h5 > <strong  id="points_tecnico"></strong> </h5>
                 </div>
 
             </div>

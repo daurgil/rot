@@ -179,8 +179,10 @@
   public function obtain_products(){
 
     if (isset($_GET["idProduct"])) {
+
         $arrValue= null;
-        $result = filter_num_int($_GET['idProduct']);
+        //$result = filter_num_int($_GET['idProduct']);/// per a numero id
+        $result = filter_string($_GET['idProduct']); ////Cambiat per a que funcione en dni in no en numero id
         if ($result['resultado']) {
           $id= $result['datos'];
         }else {
@@ -191,13 +193,15 @@
         try {
           $path_model = MODEL_PRODUCTS;
           $arrValue = loadModel($path_model, "list_model", "details_products",$id);
+          /*echo json_encode($arrValue);/////////
+          exit;*/
         } catch (Exception $e) {
           showErrorPage(2, "ERROR - 503 BD", 'HTTP/1.0 503 Service Unavailable', 503);
         }
         restore_error_handler();
 
         if ($arrValue) {
-            $jsondata["product"] = $arrValue[0];
+            $jsondata["tecnico"] = $arrValue[0];
     	      echo json_encode($jsondata);
             exit;
         } else {

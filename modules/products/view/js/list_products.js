@@ -20,7 +20,7 @@ function search(keyword) {
     } else {
         url = urlbase + "&num_pages=true&keyword=" + keyword;
     }
-    console.log(url);
+
     $.get(url, function (data, status) {
 
         var json = JSON.parse(data);
@@ -31,11 +31,10 @@ function search(keyword) {
         } else {
             url = urlbase + "&keyword=" + keyword;
         }
-        console.log(url);
+
         $("#results").load(url);
 
         if (pages !== 0) {
-          //console.log(pages);
             refresh();
             $(".pagination").bootpag({
                 total: pages,
@@ -67,23 +66,27 @@ function search(keyword) {
 }
 
 function search_product(keyword) {
+  console.log(keyword);
     $.get("index.php?module=products&function=name_products&nom_product=" + keyword, function (data, status) {
+        console.log(data);
         var json = JSON.parse(data);
-        var product = json.product_autocomplete;
-
+        var tecnico = json.product_autocomplete;
+        console.log(tecnico);
         $('#results').html('');
         $('.pagination').html('');
 
-        var img_product = document.getElementById('img_prod');
-        img_prod.innerHTML = '<img src="' + product[0].img_icon + '" class="img-product"> ';
+        /*var img_tecnico = document.getElementById('img_avatar');
+        img_tecnico.innerHTML = '<img src="' + product[0].img_avatar + '" class="img-product"> ';*/
 
-        var nom_product = document.getElementById('name_prod');
-        nom_product.innerHTML = product[0].name;
-        var desc_product = document.getElementById('description_prod');
-        desc_product.innerHTML = product[0].description;
-        var price_product = document.getElementById('price_prod');
-        price_product.innerHTML = "Precio: " + product[0].price + " €";
-        price_product.setAttribute("class", "special");
+        var nom_tecnico = document.getElementById('name_tecnico');
+        nom_tecnico .innerHTML = tecnico[0].name;
+        var phone_tecnico  = document.getElementById('phone_tecnico');
+        phone_tecnico.innerHTML = tecnico[0].phone;
+        var email_tecnico = document.getElementById('email_tecnico');
+        email_tecnico.innerHTML = tecnico[0].email;
+        var points_tecnico = document.getElementById('points_tecnico');
+        points_tecnico.innerHTML = "Puntos: " + tecnico[0].points;
+        points_tecnico.setAttribute("class", "special");
 
     }).fail(function (xhr) {
       console.log("error");
@@ -94,20 +97,23 @@ function search_product(keyword) {
 }
 
 function count_product(keyword) {
+  console.log("count");
     $.get("index.php?module=products&function=count_products&count_product=" + keyword, function (data, status) {
         var json = JSON.parse(data);
         var num_products = json.num_products;
         //alert("num_products: " + num_products);
-
+        console.log(num_products);
         if (num_products == 0) {
             $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
             $('.pagination').html('');
             reset();
         }
         if (num_products == 1) {
+            console.log("searchProd");
             search_product(keyword);
         }
         if (num_products > 1) {
+          console.log("search");
             search(keyword);
         }
     }).fail(function () {
@@ -134,13 +140,13 @@ $(document).ready(function () {
      //("#keyword").val(keyword) if we don't use refresh(), this way we could show the search param
       setCookie("search","",1);
   } else {
-    console.log("search");
       search();
   }
 
+  console.log("ready");
   $("#search_prod").submit(function (e) {
+    console.log("search");
       var keyword = document.getElementById('keyword').value;
-      console.log(keyword);
       var validate_keyword = validate_search(keyword);
       if (validate_keyword)
           setCookie("search", keyword, 1);

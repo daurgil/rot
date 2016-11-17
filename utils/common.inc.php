@@ -2,7 +2,7 @@
 
 function loadModel($model_path, $model_name, $function, $arrArgument = '') {
        $model = $model_path . $model_name . '.class.singleton.php';
-       
+
        if (file_exists($model)) {
            include_once($model);
 
@@ -57,7 +57,7 @@ function loadView($rutaVista="", $templateName="", $arrValue=''){
 
       /*$message = "NO TEMPLATE FOUND";
 			$arrData = $message;*/
-			require_once ($_SERVER['DOCUMENT_ROOT']. '/php_mvc_products/view/inc/templates_error/'. "error" .'.php');
+			require_once (VIEW_PATH_INC_ERROR. "error" .'.php');
 
     }
 }////END loadView

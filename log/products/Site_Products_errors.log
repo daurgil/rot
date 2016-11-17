@@ -2885,3 +2885,30 @@ ERROR - 503 BD | 12.11.2016 08:40:13  |  Product:   |  | response 200
 ERROR - 503 BD | 12.11.2016 08:42:53  |  Product:   |  | response 200
 ERROR - 503 BD | 12.11.2016 08:44:42  |  Product:   |  | response 200
 error paint_template_error | 12.11.2016 08:44:42  |  Product:   | products | response200
+ERROR: [8] Undefined variable: stmt
+Notice on line 24 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | 13.11.2016 01:44:29  |  Product:   | products | response 200
+ERROR: [8] Use of undefined constant exir - assumed 'exir'
+Notice on line 45 in file /var/www/html/rot/model/db.class.singleton.php
+ | 13.11.2016 02:15:08  |  Product:   | products | response 200
+ERROR: [8] Undefined variable: result
+Notice on line 24 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | 14.11.2016 08:22:27  |  Product:   | products | response 200
+ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | 14.11.2016 09:12:42  |  Product:   | products | response 200
+ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | 14.11.2016 09:21:39  |  Product:   | products | response 200
+ERROR: [8] Use of undefined constant id - assumed 'id'
+Notice on line 23 in file /var/www/html/rot/modules/products/model/DAO/list_dao.class.singleton.php
+ | 14.11.2016 09:22:32  |  Product:   | products | response 200
+ERROR - 404 NO DATA | 15.11.2016 05:01:45  |  Product:   |  | response 200
+ERROR - 404 NO DATA | 15.11.2016 05:03:07  |  Product:   |  | response 200
+ERROR - 404 NO DATA | 15.11.2016 05:19:10  |  Product:   |  | response 200
+error loadView general | 16.11.2016 08:33:00  |  Product:   | products | response 400
+error paint_template_search | 17.11.2016 05:51:24  |  Product:   | products | response 200
+error paint_template_search | 17.11.2016 05:51:32  |  Product:   | products | response 200
+error paint_template_search | 17.11.2016 05:51:43  |  Product:   | products | response 200
+error paint_template_search | 17.11.2016 05:51:53  |  Product:   | products | response 200
+error paint_template_search | 17.11.2016 05:52:54  |  Product:   | products | response 200
