@@ -3753,3 +3753,161 @@ Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.c
  | users | response 200
 22/11/16 06:05:28 PM | error loadView general | users | response 400
 22/11/16 06:34:26 PM | error loadView general | users | response 400
+22/11/16 06:52:15 PM | error loadView general | users | response 400
+22/11/16 06:55:32 PM | error loadView general | users | response 400
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200
+22/11/16 06:55:39 PM | ERROR: [2] array_push() expects parameter 1 to be array, null given
+Warning on line 80 in file /var/www/html/rot/modules/users/model/DAO/users_dao.class.singleton.php
+ | users | response 200

@@ -63,7 +63,7 @@ function validate_user($value){
 
     'street' => array(
       'filter'=>FILTER_VALIDATE_REGEXP,
-      'options' => array('regexp' => '/^[0-9A-Za-z\s]{2,30}$/')
+      'options' => array('regexp' => "/[A-Za-z0-9'\.\-\s\,]+$/")
     ),
   );
 
