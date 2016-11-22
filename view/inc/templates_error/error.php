@@ -1,5 +1,7 @@
 <div id='page'>
     <br><br>
+    <br><br>
+    <br><br>
     <div id='header' class='status<?php echo $arrData['code']?>'>
         <?php
         if (isset($arrData) && !empty($arrData)) {

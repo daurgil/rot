@@ -1,15 +1,13 @@
 <?php
-/*echo json_encode("model");
-exit;*/
 
-class list_model {
+class products_model {
   /*echo json_encode("model");
   exit;*/
     private $bll;
     static $_instance;
 
     private function __construct() {
-        $this->bll = list_bll::getInstance();
+        $this->bll = products_bll::getInstance();
     }
 
     public static function getInstance() {

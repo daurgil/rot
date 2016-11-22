@@ -6,7 +6,7 @@ function paint_template_error($message) {
     //$arrData = response_code(http_response_code());
     print ("<section id='error' class='container'>");
     print ("<div id='page'>");
-    print ("<br><br>");
+    print ("<br><br><br><br>");
     print ("<div id='header' class='status".http_response_code()."'>");
     //https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP
     //print("<h1>" . $message . "</h1>");
@@ -28,7 +28,7 @@ function paint_template_error($message) {
 }
 
 function paint_template_products($arrData) {
-    print ("<script type='text/javascript' src='modules/products/view/js/modal_products.js'></script>");
+    print ("<script type='text/javascript' src='".PRODUCTS_JS_PATH."modal_products.js'></script>");
     print('<section id="services" >');
     print ("<div class='container'>");
 

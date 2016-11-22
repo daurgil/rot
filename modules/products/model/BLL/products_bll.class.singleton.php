@@ -1,13 +1,13 @@
 <?php
 
-class list_bll {
+class products_bll {
 
     private $dao;
     private $db;
     static $_instance;
 
     private function __construct() {
-        $this->dao = list_dao::getInstance();
+        $this->dao = products_dao::getInstance();
         $this->db = db::getInstance();
     }
 
@@ -48,11 +48,4 @@ class list_bll {
     public function select_like_limit_products_BLL($arrArgument){
       return $this->dao->select_like_limit_products_DAO($this->db,$arrArgument);
     }
-    /*public function page_products_BLL($arrArgument) {
-        return $this->dao->page_products_DAO($this->db,$arrArgument);
-    }
-
-    public function total_products_BLL() {
-        return $this->dao->total_products_DAO($this->db);
-    }*/
 }

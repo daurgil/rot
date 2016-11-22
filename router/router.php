@@ -2,6 +2,12 @@
 require_once ("paths.php");
 require 'autoload.php';
 
+include(UTILS . "filters.inc.php");
+include(UTILS . "utils.inc.php");
+include(UTILS . "response_code.inc.php");
+include(UTILS . "common.inc.php");
+include LOG_DIR;
+
 if(PRODUCTION){ //estamos en producción
 		ini_set('display_errors', '1');
 		ini_set('error_reporting', E_ERROR | E_WARNING | E_NOTICE); //error_reporting(E_ALL) ;
@@ -21,7 +27,7 @@ if(PRODUCTION){ //estamos en producción
       }
 
       if (!empty($_GET['function'])) {
-        $URI_function = $_GET['function'];
+				$URI_function= $_GET['function'];
       } else {
         $URI_function = 'begin';
       }
@@ -39,6 +45,7 @@ if(PRODUCTION){ //estamos en producción
               $exist = true;
 
               $path = MODULES_PATH . $URI_module . "/controller/controller_" . $URI_module . ".class.php";
+
               if (file_exists($path)) {
                   require_once($path);
 
@@ -46,14 +53,14 @@ if(PRODUCTION){ //estamos en producción
                   $obj = new $controllerClass;
 
               } else {
-                  showErrorPage(1, "", 'HTTP/1.0 400 Bad Request', 400);
-              }
+                  showErrorPage(4, "", 'HTTP/1.0 400 Bad Request', 400);
+							}
               handlerFunction(((String)$module->name), $obj, $URI_function);
 	            break;
           }
       }
       if (!$exist) {
-	        showErrorPage(1, "", 'HTTP/1.0 400 Bad Request', 400);
+	        showErrorPage(4, "", 'HTTP/1.0 400 Bad Request', 400);
 	    }
   }/////END handlerModule
 
@@ -70,8 +77,8 @@ if(PRODUCTION){ //estamos en producción
         }
     }
     if (!$exist) {
-        showErrorPage(1, "", 'HTTP/1.0 400 Bad Request', 400);
-    } else {
+        showErrorPage(4, "", 'HTTP/1.0 400 Bad Request', 400);
+		} else {
         call_user_func(array($obj, $event));
     }
   }

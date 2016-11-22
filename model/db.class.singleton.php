@@ -40,11 +40,6 @@
         }
 
         public function ejecutar($sql) {
-          /*if ($sql == "SELECT * FROM tecnicos WHERE dni='11288118K'") {
-            echo json_encode("db");
-            exit;
-          }*/
-
             $this->stmt = $this->link->query($sql);
             return $this->stmt;
         }

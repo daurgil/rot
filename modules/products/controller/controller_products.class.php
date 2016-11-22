@@ -3,11 +3,6 @@
 
     public function __construct() {
       include(UTILS_PRODUCTS . "utils_list.inc.php");
-			include LOG_DIR;
-      include(UTILS . "filters.inc.php");
-			include(UTILS . "utils.inc.php");
-			include(UTILS . "response_code.inc.php");
-			include(UTILS . "common.inc.php");
 
       $_SESSION['module'] = "products";
     }
@@ -22,12 +17,12 @@
     }
 
     public function autocomplete_products() {
-      if ((isset($_GET["autocomplete"])) && ($_GET["autocomplete"] === "true")) {
+      if ((isset($_POST["autocomplete"])) && ($_POST["autocomplete"] === "true")) {
           set_error_handler('ErrorHandler');
           $path_model = MODEL_PRODUCTS;
           try {
 
-              $nameProducts = loadModel($path_model, "list_model", "select_column_products", "name");
+              $nameProducts = loadModel($path_model, "products_model", "select_column_products", "name");
           } catch (Exception $e) {
               showErrorPage(2, "ERROR - 503 BD", 'HTTP/1.0 503 Service Unavailable', 503);
           }
@@ -44,9 +39,9 @@
     }
 
     public function name_products() {
-      if (isset($_GET["nom_product"])) {
+      if (isset($_POST["nom_product"])) {
 
-          $result = filter_string($_GET["nom_product"]);
+          $result = filter_string($_POST["nom_product"]);
           if ($result['resultado']) {
               $criteria = $result['datos'];
           } else {
@@ -60,7 +55,7 @@
                   "column" => "name",
                   "like" => $criteria
               );
-              $producto = loadModel($path_model, "list_model", "select_like_products", $arrArgument);
+              $producto = loadModel($path_model, "products_model", "select_like_products", $arrArgument);
 
               //throw new Exception(); //que entre en el catch
           } catch (Exception $e) {
@@ -80,9 +75,9 @@
   }
 
   public function count_products() {
-    if (isset($_GET["count_product"])) {
+    if (isset($_POST["count_product"])) {
 
-        $result = filter_string($_GET["count_product"]);
+        $result = filter_string($_POST["count_product"]);
         if ($result['resultado']) {
             $criteria = $result['datos'];
         } else {
@@ -96,7 +91,7 @@
                 "column" => "name",
                 "like" => $criteria
             );
-            $total_rows = loadModel($path_model, "list_model", "count_like_products", $arrArgument);
+            $total_rows = loadModel($path_model, "products_model", "count_like_products", $arrArgument);
             //throw new Exception(); //que entre en el catch
         } catch (Exception $e) {
             showErrorPage(2, "ERROR - 503 BD", 'HTTP/1.0 503 Service Unavailable', 503);
@@ -114,11 +109,12 @@
   }
 
   public function num_pages_products() {
+    /*echo json_encode("hola");
+    exit;*/
+    if ((isset($_POST["num_pages"])) && ($_POST["num_pages"] === "true")) {
 
-    if ((isset($_GET["num_pages"])) && ($_GET["num_pages"] === "true")) {
-
-        if (isset($_GET['keyword'])) {
-          $result = filter_string($_GET['keyword']);
+        if (isset($_POST['keyword'])) {
+          $result = filter_string($_POST['keyword']);
           if ($result['resultado']) {
             $criteria = $result['datos'];
           } else {
@@ -141,7 +137,7 @@
             );
 
             //throw new Exception();
-            $arrValue = loadModel($path_model, "list_model", "count_like_products", $arrArgument);
+            $arrValue = loadModel($path_model, "products_model", "count_like_products", $arrArgument);
 
             $get_total_rows = $arrValue[0]["total"]; //total records
             $pages = ceil($get_total_rows / $item_per_page); //break total records into pages
@@ -164,25 +160,25 @@
 
 
   public function view_error_true() {
-    if ((isset($_GET["view_error"])) && ($_GET["view_error"] === "true")) {
+    if ((isset($_POST["view_error"])) && ($_POST["view_error"] === "true")) {
         showErrorPage(0, "ERROR - 503 BD Unavailable", 503);
     }
 	}
 
 
   public function view_error_false() {
-    if ((isset($_GET["view_error"])) && ($_GET["view_error"] === "false")) {
+    if ((isset($_POST["view_error"])) && ($_POST["view_error"] === "false")) {
         showErrorPage(3, "RESULTS NOT FOUND <br> Please, check over if you misspelled any letter of the search word");
     }
 	}
 
   public function obtain_products(){
 
-    if (isset($_GET["idProduct"])) {
+    if (isset($_POST["idProduct"])) {
 
         $arrValue= null;
         //$result = filter_num_int($_GET['idProduct']);/// per a numero id
-        $result = filter_string($_GET['idProduct']); ////Cambiat per a que funcione en dni in no en numero id
+        $result = filter_string($_POST['idProduct']); ////Cambiat per a que funcione en dni in no en numero id
         if ($result['resultado']) {
           $id= $result['datos'];
         }else {
@@ -192,7 +188,7 @@
         set_error_handler('ErrorHandler');
         try {
           $path_model = MODEL_PRODUCTS;
-          $arrValue = loadModel($path_model, "list_model", "details_products",$id);
+          $arrValue = loadModel($path_model, "products_model", "details_products",$id);
           /*echo json_encode($arrValue);/////////
           exit;*/
         } catch (Exception $e) {
@@ -220,8 +216,8 @@
             $page_number = 1;
         }
 
-        if (isset($_GET["keyword"])) {
-            $result = filter_string($_GET["keyword"]);
+        if (isset($_POST["keyword"])) {
+            $result = filter_string($_POST["keyword"]);
             if ($result['resultado']) {
                 $criteria = $result['datos'];
             } else {
@@ -252,7 +248,7 @@
         set_error_handler('ErrorHandler');
         try {
 
-            $arrValue = loadModel($path_model, "list_model", "select_like_limit_products", $arrArgument);
+            $arrValue = loadModel($path_model, "products_model", "select_like_limit_products", $arrArgument);
         } catch (Exception $e) {
             showErrorPage(0, "ERROR - 503 BD Unavailable", 503);
         }

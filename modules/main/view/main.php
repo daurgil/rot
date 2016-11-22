@@ -5,19 +5,19 @@
                     <div class="carousel-inner">
                         <div class="item active">
 
-                            <img src="view/img/1.jpg" alt="" />
+                            <img src="<?php echo IMG_PATH ?>1.jpg" alt="" />
                             <div class="carousel-caption" >
                                 <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="view/img/2.jpg" alt="" />
+                            <img src="<?php echo IMG_PATH ?>2.jpg" alt="" />
                             <div class="carousel-caption ">
                                 <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="view/img/3.jpg" alt="" />
+                            <img src="<?php echo IMG_PATH ?>3.jpg" alt="" />
                             <div class="carousel-caption ">
                                 <h4 class="back-light">Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.</h4>
                             </div>

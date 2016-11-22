@@ -1,7 +1,7 @@
 <?php
 /*echo json_encode('DAO');
 exit;*/
-class list_dao {
+class products_dao {
     static $_instance;
 
     private function __construct() {
@@ -21,18 +21,13 @@ class list_dao {
 
     public function details_products_DAO($db, $arrArgument) {
 
-        //$sql = "SELECT * FROM tecnicos where dni =".$arrArgument ;
-        //$sql = "SELECT * from tecnicos where dni ='11288118K'";
-        //$sql = "select * from tecnicos where dni ='".$ides."'";
+        //$sql = "SELECT * FROM tecnicos where dni =".$arrArgument ; ///Falla por promlema de acentos en BD
         $sql = "SELECT dni, name, phone, email, description, points FROM tecnicos where dni ='".$arrArgument."'";
-        //$sql = "SELECT COUNT(*) as total from tecnicos";
-        /*echo json_encode($sql);
-        exit;*/
+
         $stmt = $db->ejecutar($sql);
 
         $result = $db->listar($stmt);
-        /*echo json_encode($result);
-        exit;*/
+
         return $result;
     }
 
@@ -76,21 +71,4 @@ class list_dao {
         $stmt=$db->ejecutar($sql);
         return $db->listar($stmt);
     }
-
-    /*public function page_products_DAO($db,$arrArgument) {
-        $position = $arrArgument['position'];
-        $item_per_page = $arrArgument['item_per_page'];
-        $sql = "SELECT * FROM products ORDER BY ident ASC LIMIT ".$position." , ".$item_per_page;
-
-        $stmt = $db->ejecutar($sql);
-        return $db->listar($stmt);
-
-    }
-
-    public function total_products_DAO($db) {
-        $sql = "SELECT COUNT(*) as total FROM products";
-        $stmt = $db->ejecutar($sql);
-        return $db->listar($stmt);
-
-    }*/
 }

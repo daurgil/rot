@@ -14,25 +14,26 @@ function refresh() {
 function search(keyword) {
 //changes the url to avoid creating another different function
 
-    var urlbase = "index.php?module=products&function=num_pages_products";
+    //var urlbase = "index.php?module=products&function=num_pages_products";
+    var urlbase = "../../products/num_pages_products/";
     if (!keyword){
-        url = urlbase + "&num_pages=true";
+        datos = {'num_pages':true};
     } else {
-        url = urlbase + "&num_pages=true&keyword=" + keyword;
+        datos = {'num_pages': true, 'keyword': keyword};
     }
 
-    $.get(url, function (data, status) {
+    $.post(urlbase, datos, function (data, status) {
 
         var json = JSON.parse(data);
         var pages = json.pages;
-        urlbase = "index.php?module=products&function=obtain_products";
+        urlbase = "../../products/obtain_products/";
         if (!keyword){
-            url = urlbase;
+            datos = '';
         } else {
-            url = urlbase + "&keyword=" + keyword;
+            datos = {"keyword": keyword};
         }
 
-        $("#results").load(url);
+        $("#results").load(urlbase, datos);
 
         if (pages !== 0) {
             refresh();
@@ -45,33 +46,32 @@ function search(keyword) {
             }).on("page", function (e, num) {
                 e.preventDefault();
                 if (!keyword){
-                    $("#results").load("index.php?module=products&function=obtain_products", {'page_num': num});
+                    $("#results").load("../../products/obtain_products/", {'page_num': num});
                 } else {
-                    $("#results").load("index.php?module=products&function=obtain_products", {'page_num': num, 'keyword': keyword});
+                    $("#results").load("../../products/obtain_products/", {'page_num': num, 'keyword': keyword});
                 }
                 reset();
             });
         } else {
-            $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
+            $("#results").load("../../products/view_error_false/", {'view_error': false}); //view_error=false
             $('.pagination').html('');
             reset();
         }
         reset();
 
     }).fail(function (xhr) {
-        $("#results").load("index.php?module=products&function=view_error_true&view_error=true");
+        $("#results").load("../../products/view_error_true/", {'view_error': true});
         $('.pagination').html('');
         reset();
     });
 }
 
 function search_product(keyword) {
-  console.log(keyword);
-    $.get("index.php?module=products&function=name_products&nom_product=" + keyword, function (data, status) {
-        console.log(data);
+    $.post("../../products/name_products/", {'nom_product': keyword}, function (data, status) {
+
         var json = JSON.parse(data);
         var tecnico = json.product_autocomplete;
-        console.log(tecnico);
+
         $('#results').html('');
         $('.pagination').html('');
 
@@ -90,34 +90,30 @@ function search_product(keyword) {
 
     }).fail(function (xhr) {
       console.log("error");
-        $("#results").load("index.php?module=products&function=view_error_false&view_error=false");
+        $("#results").load("../../products/view_error_false/", {'view_error': false});
         $('.pagination').html('');
         reset();
     });
 }
 
 function count_product(keyword) {
-  console.log("count");
-    $.get("index.php?module=products&function=count_products&count_product=" + keyword, function (data, status) {
+    $.post("../../products/count_products/", {'count_product': keyword}, function (data, status) {
         var json = JSON.parse(data);
         var num_products = json.num_products;
-        //alert("num_products: " + num_products);
-        console.log(num_products);
+
         if (num_products == 0) {
-            $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
+            $("#results").load("../../products/view_error_false/", {'view_error': false}); //view_error=false
             $('.pagination').html('');
             reset();
         }
         if (num_products == 1) {
-            console.log("searchProd");
             search_product(keyword);
         }
         if (num_products > 1) {
-          console.log("search");
             search(keyword);
         }
     }).fail(function () {
-        $("#results").load("index.php?module=products&function=view_error_true&view_error=true"); //view_error=false
+        $("#results").load("../../products/view_error_true/", {'view_error': true}); //view_error=false
         $('.pagination').html('');
         reset();
     });
@@ -143,9 +139,7 @@ $(document).ready(function () {
       search();
   }
 
-  console.log("ready");
   $("#search_prod").submit(function (e) {
-    console.log("search");
       var keyword = document.getElementById('keyword').value;
       var validate_keyword = validate_search(keyword);
       if (validate_keyword)
@@ -168,7 +162,7 @@ $(document).ready(function () {
 
   });
 
-    $.get("index.php?module=products&function=autocomplete_products&autocomplete=true", function (data, status) {
+    $.post("../../products/autocomplete_products/", {'autocomplete': true}, function (data, status) {
         var json = JSON.parse(data);
         var name_products = json.nom_productos;
 
@@ -190,7 +184,7 @@ $(document).ready(function () {
         });
 
     }).fail(function (xhr) {
-      $("#results").load("index.php?module=products&function=view_error_false&view_error=false"); //view_error=false
+      $("#results").load("../../products/view_error_false/", {'view_error': false}); //view_error=false
       $('.pagination').html('');
       reset();
 

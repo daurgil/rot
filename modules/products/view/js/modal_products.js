@@ -6,8 +6,8 @@ $(document).ready(function () {
         var id = this.getAttribute('id');
         console.log(id);
         //alert(id);
-
-        $.get("index.php?module=products&function=obtain_products&idProduct=" + id, function (data, status) {
+      //  "../../products/obtain_products", {'idProduct'}
+        $.post("../../products/obtain_products", {'idProduct': id}, function (data, status) {
             console.log(data);
             var json = JSON.parse(data);
             var tecnico = json.tecnico;
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         })
                 .fail(function (xhr) {
-                    $("#results").load("index.php?module=products&function=view_error_false&view_error=false");
+                    $("#results").load("../../products/view_error_false/", {'view_error': false});
                 });
     });
 });
